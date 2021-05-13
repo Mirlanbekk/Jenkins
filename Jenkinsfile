@@ -21,7 +21,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'PASS', usernameVariable: 'USER')]){
                         sh 'docker build -t mirlanbek/sprint:v1 .' // creating image localy
                         sh "echo $PASS | docker login -u $USER --password-stdin" // login to my docker hub
-                        sh 'docker push mcalik77/sprint:v1' //pushing the local image to docker hub
+                        sh 'docker push mirlanbek/sprint:v1' //pushing the local image to docker hub
                     }
                 }
             }
