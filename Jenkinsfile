@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script{
                     echo 'building application'
-                    sh 'cd sprint/ && mvn package'
+                    sh 'cd java-maven-app/ && mvn package'
                 }
             }
         }
