@@ -1,10 +1,8 @@
 pipeline {
     agent {
-        docker {
-            image 'hashicorp/terraform:latest'
-            args  '--entrypoint="" -u root -v /opt/jenkins/.aws:/root/.aws'
+        label 'mac'
         }
-    }
+    
     parameters {
         string(name: 'Command', defaultValue: 'apply', description: 'Which terraform command would you like to use?')
         string(name: 'environment', defaultValue: 'dev', description: 'Which terraform command would you like to use?')
@@ -33,4 +31,3 @@ pipeline {
         }
     }
 }
-
