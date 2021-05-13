@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
     
@@ -11,7 +10,7 @@ pipeline {
             steps {
                 script{
                     echo 'building application'
-                    sh 'cd java-maven-app/ && mvn package'
+                    sh 'cd sprint/ && mvn package'
                 }
             }
         }
